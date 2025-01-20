@@ -7,25 +7,28 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-image: url(bg.webp); 
-    color: #333333; /* Dark gray text */
+    background-image: url(bg.webp);
+    color: #333333;
     padding-bottom: 60px;
 }
 
 /* Header Section */
 header {
-    background-image: url(bg\ 2.jpg);
-    color: #fff7f7; /* Light text */
+    background-image: url('bg 2.jpg');
+    color: #fff7f7;
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    margin-bottom: 20px; /* Give some space below header */
 }
 
 header .logo-and-title {
     display: flex;
     align-items: center;
+    flex: 1; /* Allow it to grow and fill available space */
+    margin-right: 20px;
 }
 
 header .logo {
@@ -33,21 +36,23 @@ header .logo {
 }
 
 header .logo img {
-    width: 50px; /* Set the width of the logo */
-    height: auto; /* Maintain the aspect ratio of the logo */
+    width: 50px; /* Logo size */
+    height: auto;
 }
 
 header h1 {
     margin: 0;
     font-size: 2rem;
-    color: #ffffff; /* Color for the university name */
+    color: #ffffff;
 }
 
+/* Navigation Links */
 header .nav-links {
     display: flex;
-    width: 100%;
     justify-content: space-between;
     align-items: center;
+    width: 100%; /* Ensure nav links take full width */
+    margin-top: 10px; /* Spacing for smaller screens */
 }
 
 header .nav-left {
@@ -60,7 +65,7 @@ header .nav-right {
 }
 
 header .nav-links a {
-    color: #333333; /* Dark text for links */
+    color: #333333;
     text-decoration: none;
     margin: 0 15px;
     font-size: 16px;
@@ -68,9 +73,8 @@ header .nav-links a {
 
 header .nav-links a:hover {
     text-decoration: underline;
-    color: #FF9F80; /* Dark Peach on hover */
+    color: #FF9F80;
 }
-
 
 main {
     padding: 50px;
@@ -79,7 +83,7 @@ main {
 
 /* Section background color for "background-story" */
 #background-story {
-    background-color: #333; /* Dark background for the section */
+    background-color: #333;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -88,18 +92,17 @@ main {
 
 /* Headings in background story */
 #background-story h1 {
-    color: #FF5733; /* Peach color for main heading */
+    color: #FF5733;
     font-size: 2em;
     margin-bottom: 10px;
 }
 
 #background-story h2 {
-    color: #FFB86C; /* Lighter peach color for sub-headings */
+    color: #FFB86C;
 }
 
-/* Paragraph text */
 #background-story p {
-    color: white; /* White color for paragraph text */
+    color: white;
 }
 
 /* List styling for "Why Choose Us?" section */
@@ -110,12 +113,11 @@ main {
 
 #background-story ul li {
     margin-bottom: 10px;
-    color: white; /* White color for list items */
+    color: white;
 }
 
-/* Button Styling */
 .btn {
-    background-color: #FF5733; /* Button background color */
+    background-color: #FF5733;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -127,102 +129,65 @@ main {
 }
 
 .btn:hover {
-    background-color: #C70039; /* Hover effect color */
+    background-color: #C70039;
 }
 
-/* General Footer Styling */
 footer {
-    background-image: url('bg\ 2.jpg');
+    background-image: url('bg 2.jpg');
     color: white;
     text-align: center;
-    padding: 1px; /* Reduced padding */
+    padding: 1px;
     position: fixed;
     bottom: 0;
     left: 0;
-    width: 100%; /* Full width for footer */
-    height: 200px; /* Footer height */
+    width: 100%;
+    height: 200px;
     display: flex;
-    justify-content: space-between; /* Spaces between sections */
+    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Allow wrap for mobile */
-    z-index: 1000; /* Ensure footer stays above other content */
+    flex-wrap: wrap;
+    z-index: 1000;
 }
 
-/* Footer Text */
 footer p {
     font-size: 14px;
     margin: 0;
 }
 
-/* Quick Links section - Centered */
+.footer-box {
+    margin: 10px;
+    text-align: left;
+    flex: 1;
+}
+
 .footer-box.quick-links {
     display: flex;
     flex-direction: column;
     align-items: left;
-    text-align: left;
-    flex: 1; /* Takes up available space */
-    margin: 10px;
 }
 
 .footer-box.quick-links h3 {
-    margin-bottom: 10px;
     font-size: 20px;
-    font-weight: bold;
 }
 
 .footer-box.quick-links a {
-    color: #ECF0F1;
-    text-decoration: none;
-    margin: 3px 0;
     font-size: 18px;
-}
-
-.footer-box.quick-links a:hover {
-    color: #3498DB;
-}
-
-/* About Us section - Left-aligned */
-.footer-box.about-us {
-    text-align: left;
-    flex: 1; /* Takes up available space */
-    margin: 10px;
 }
 
 .footer-box.about-us h3 {
     margin-bottom: 5px;
     font-size: 16px;
-    font-weight: bold;
 }
 
-.footer-box.about-us p {
-    font-size: 14px;
-    line-height: 1.4;
-}
-
-/* For More Questions - Upper Right-aligned */
 .footer-box.for-more-questions {
     text-align: right;
-    width: 200px; /* Adjusted form width */
+    width: 200px;
     margin: 10px;
-}
-
-.footer-box.for-more-questions h3 {
-    margin-bottom: 5px;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.footer-box.for-more-questions form {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
 }
 
 .footer-box.for-more-questions input {
     padding: 8px;
     font-size: 14px;
-    border-radius: 4px;
-    border: 1px solid #BDC3C7;
 }
 
 .footer-box.for-more-questions button {
@@ -241,48 +206,52 @@ footer p {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    footer {
-        padding: 15px;
-        height: auto; /* Allow height to adjust on mobile */
-        flex-direction: column; /* Stack sections on mobile */
-        align-items: center; /* Center items */
-    }
-
-    .footer-box {
-        width: 100%; /* Full width on mobile */
-        text-align: center;
-    }
-
-    .footer-box.for-more-questions {
-        position: static;
-        margin-top: 10px;
-        text-align: center;
-        width: 100%; /* Ensure full width on mobile */
-    }
-
-    .footer-box.quick-links h3 {
-        font-size: 18px; /* Adjust heading size */
-    }
-
-    .footer-box.quick-links a {
-        font-size: 16px; /* Adjust link size */
-    }
-
-    /* Ensure logo and navigation do not change */
     header {
-        flex-wrap: wrap; /* Keep original layout */
-        align-items: center;
+        flex-direction: column;
+        padding: 15px;
     }
 
-    header .logo img {
-        width: 50px; /* Keep logo size unchanged */
+    header .logo-and-title {
+        margin-bottom: 10px; /* Space between logo and title */
+    }
+
+    header h1 {
+        font-size: 1.5rem; /* Reduce font size for mobile */
     }
 
     header .nav-links {
-        flex-direction: row; /* Keep navigation links in a row */
+        flex-direction: column;
+        width: 100%;
+        margin-top: 20px;
     }
 
     header .nav-links a {
-        font-size: 16px; /* Ensure link size consistency */
+        margin: 10px 0;
+        font-size: 18px;
+    }
+
+    footer {
+        padding: 15px;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-box {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-box.quick-links h3 {
+        font-size: 18px;
+    }
+
+    .footer-box.quick-links a {
+        font-size: 16px;
+    }
+
+    .footer-box.for-more-questions {
+        text-align: center;
+        width: 100%;
     }
 }
